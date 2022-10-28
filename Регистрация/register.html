@@ -1,6 +1,5 @@
 <!-- multistep form -->
 <link rel="stylesheet" href="register.css">
-
 <form id="msform">
   <!-- progressbar -->
   <ul id="progressbar">
@@ -36,27 +35,22 @@
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" />
   </fieldset>
-  <script src="register.js">
-    
+  <script>
+
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
-function * profileIter(values) {
-    for (let nextIndex = 0; nextIndex < values.length; ++nextIndex){
-        yield values[nextIndex];
-    }
-}
-(".next").click(function(){
+$(".next").click(function(){
 	if(animating) return false;
 	animating = true;
 	
-	current_fs = (this).parent();
-	next_fs = (this).parent().next();
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
 	
 	//activate next step on progressbar using the index of next_fs
-	("#progressbar li").eq(("fieldset").index(next_fs)).addClass("active");
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 	
 	//show the next fieldset
 	next_fs.show(); 
@@ -86,15 +80,15 @@ function * profileIter(values) {
 	});
 });
 
-(".previous").click(function(){
+$(".previous").click(function(){
 	if(animating) return false;
 	animating = true;
 	
-	current_fs = (this).parent();
-	previous_fs = (this).parent().prev();
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
 	
 	//de-activate current step on progressbar
-	("#progressbar li").eq(("fieldset").index(current_fs)).removeClass("active");
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 	
 	//show the previous fieldset
 	previous_fs.show(); 
@@ -121,7 +115,7 @@ function * profileIter(values) {
 	});
 });
 
-(".submit").click(function(){
+$(".submit").click(function(){
 	return false;
 })
 
