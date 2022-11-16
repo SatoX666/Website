@@ -1,5 +1,6 @@
 body {
-    background-color: aliceblue;
+    background-color:rgb(20, 20, 27);
+    color: whitesmoke;
     
     margin: 0;
     font-size: 16px;
@@ -22,13 +23,38 @@ nav * {
 nav img{
     margin-left: 1%;
     margin-right: 3%;
+    filter:invert() ;
 }
 
 nav a {
     text-decoration: none;
-    color:black;
+    color:whitesmoke;
 }
 
 .title {
     margin-top: 1%;
+}
+
+header {
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+    margin-top: 1%;
+    align-items: center;
+    font-family: 'Mulish', sans-serif;
+  
+}
+
+header h1{
+    margin-bottom: 0%;
+    font-size: 750%;
+    text-shadow: 5px 5px 5px black;
+}
+
+header h4{
+    margin-top: 0%;
+    font-style: italic;
+    font-size: 200%;
 }
