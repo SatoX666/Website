@@ -8,7 +8,7 @@ body {
 }
 
 nav {
-    background-color:grey;
+    background-color:rgb(173, 33, 33);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@ nav img{
 
 nav a {
     text-decoration: none;
-    color: whitesmoke;
+    color:black;
 }
 
 .title {
