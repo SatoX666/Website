@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    background-color:rgb(173, 33, 33);
+    background-color:#ad2121;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -45,21 +45,23 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* background-size: cover; */
-    display: flex;
+    /* display: flex; */
     justify-content: space-around;
     padding: 2%;
     padding-top: 2%;
-    padding-bottom: 10%;
+    padding-bottom: 12%;
+    height: 270px;
     align-items: center;
     font-family: 'Mulish', sans-serif;
     color: black;  
     z-index: -1;
+    position: relative;
 }
 
 .header_title {
     position: fixed;
-    top: 10%;
-    left: 13%;
+    top: 15%;
+    /* left: 0%; */
     z-index: 0;
 }
 
@@ -87,7 +89,7 @@ header h4{
     grid-gap: 20px;
     padding-left: 5%;
     padding-right: 5%;
-    background-color: yellow;
+    background-color: rgb(20, 20, 27);
     background-attachment: fixed;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -98,10 +100,6 @@ header h4{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.grid .g4 img {
-    object-fit: contain;
 }
 
 .grid figure {
@@ -153,4 +151,120 @@ header h4{
     grid-column-end: 13;
     grid-row-start: 5;
     grid-row-end: 9;
+}
+
+.block_3 {
+    background-color:aliceblue;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.arenda {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    width: 50%;
+    background-color: #ad2121;
+    color: whitesmoke;
+    border-radius: 30px;
+}
+
+.guide {
+    color: black;
+    margin-left: 5%;
+    width: 40%;
+    position: relative;
+}
+
+.guide label {
+    background-color: #ad2121;
+    font-size: large;
+    font-weight: 600;
+    color: whitesmoke;
+    width: fit-content;
+    padding: 3%;
+    border-radius: 30px;
+    margin: 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.guide .button {
+    display: none;
+}
+
+.guide .button:checked~label {
+    animation: move 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    from {padding-right: 0%;}
+    to {padding-right: 60%;}
+    from {padding-bottom: 0%;}
+    to {padding-bottom: 40%;}
+}
+
+.guide .lp {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 60px;
+    left: 2%;
+    z-index: 4;
+    /* border: 2px solid black; */
+}
+
+.guide p {
+    color: whitesmoke;
+    /* background-color: #ad2121; */
+    padding: 2%;
+    margin: 0;
+}
+
+.guide .button:checked ~ .lp .p1{
+    margin-top: 0%;
+    padding-top: 0%;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.guide .button:checked ~ .lp .p2 {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.guide .button:checked ~ .lp .p3 {
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+.guide .button:checked ~ .lp .p4 {
+    opacity: 1;
+    transition: opacity 4s;
+}
+
+.guide .p1 {
+    opacity: 0;
+}
+
+.guide .p2 {
+    opacity: 0;
+}
+
+.guide .p3 {
+    opacity: 0;
+}
+
+.guide .p4 {
+    opacity: 0;
+}
+
+@media (max-width:425px) {
+    .block_3 {flex-direction: column;}
 }
