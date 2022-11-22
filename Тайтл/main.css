@@ -268,3 +268,103 @@ header h4{
 @media (max-width:425px) {
     .block_3 {flex-direction: column;}
 }
+
+/* faq */
+.faq{
+    background-color: rgb(20, 20, 27);
+}
+
+.faq p {
+    height: 0px;
+    overflow: hidden;
+}
+
+.faq input {
+    display: none;
+}
+
+.faq #q1:checked~.q1 {
+    animation: faq_move_open 1s forwards;
+}
+@keyframes faq_move_open {
+    from {height: 0px; overflow: hidden;}
+    to {height: 25px; overflow: visible;}
+}
+
+.faq #q1:not(:checked)~.q1 {
+    animation: faq_move_closed 1s forwards;
+}
+@keyframes faq_move_closed {
+    from {height: 25px; overflow: visible;}
+    to {height: 0px; overflow: hidden;}
+}
+
+
+.faq #q2:checked~.q2 {
+    animation: faq_move_open 1s forwards;
+}
+@keyframes faq_move_open {
+    from {height: 0px; overflow: hidden;}
+    to {height: 25px; overflow: visible;}
+}
+
+.faq #q2:not(:checked)~.q2 {
+    animation: faq_move_closed 1s forwards;
+}
+@keyframes faq_move_closed {
+    from {height: 25px; overflow: visible;}
+    to {height: 0px; overflow: hidden;}
+}
+
+
+.faq #q3:checked~.q3 {
+    animation: faq_move_open 1s forwards;
+}
+@keyframes faq_move_open {
+    from {height: 0px; overflow: hidden;}
+    to {height: 25px; overflow: visible;}
+}
+
+.faq #q3:not(:checked)~.q3 {
+    animation: faq_move_closed 1s forwards;
+}
+@keyframes faq_move_closed {
+    from {height: 25px; overflow: visible;}
+    to {height: 0px; overflow: hidden;}
+}
+
+
+.faq #q4:checked~.q4 {
+    animation: faq_move_open 1s forwards;
+}
+@keyframes faq_move_open {
+    from {height: 0px; overflow: hidden;}
+    to {height: 25px; overflow: visible;}
+}
+
+.faq #q4:not(:checked)~.q4 {
+    animation: faq_move_closed 1s forwards;
+}
+@keyframes faq_move_closed {
+    from {height: 25px; overflow: visible;}
+    to {height: 0px; overflow: hidden;}
+}
+
+
+.faq #q5:checked~.q5 {
+    animation: faq_move_open 1s forwards;
+}
+@keyframes faq_move_open {
+    from {height: 0px; overflow: hidden;}
+    to {height: 25px; overflow: visible;}
+}
+
+.faq #q5:not(:checked)~.q5 {
+    animation: faq_move_closed 1s forwards;
+}
+@keyframes faq_move_closed {
+    from {height: 25px; overflow: visible;}
+    to {height: 0px; overflow: hidden;}
+}
+
+
