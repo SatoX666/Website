@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(20, 20, 27);
+    background-color:#242427;
     background-attachment: fixed;
     color: whitesmoke;
     
@@ -9,6 +9,8 @@ body {
     font-family: monospace,'Courier New', Courier;
 }
 
+
+/* nav */
 nav {
     background-color:#ad2121;
     padding: 10px;
@@ -35,6 +37,8 @@ nav a {
     color:whitesmoke;
 }
 
+
+/* title */
 .title {
     margin-top: 1%;
 }
@@ -82,6 +86,9 @@ header h4{
     font-size: 200%;
 }
 
+
+
+/* grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -89,7 +96,7 @@ header h4{
     grid-gap: 20px;
     padding-left: 5%;
     padding-right: 5%;
-    background-color: rgb(20, 20, 27);
+    background-color: #242427;
     background-attachment: fixed;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -153,6 +160,10 @@ header h4{
     grid-row-end: 9;
 }
 
+
+
+/* .block_3 */
+
 .block_3 {
     background-color:aliceblue;
     padding: 3%;
@@ -173,6 +184,8 @@ header h4{
     border-radius: 30px;
 }
 
+
+/* guide */
 .guide {
     color: black;
     margin-left: 5%;
@@ -269,14 +282,19 @@ header h4{
     .block_3 {flex-direction: column;}
 }
 
+
+
 /* faq */
-.faq{
-    background-color: rgb(20, 20, 27);
+.faq {
+    background-color: #242427;
+    padding-left: 3%;
 }
+
 
 .faq p {
     height: 0px;
     overflow: hidden;
+    
 }
 
 .faq input {
