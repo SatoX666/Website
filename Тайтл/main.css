@@ -44,12 +44,9 @@ nav a {
 }
 
 header {
-    /* border: 2px solid black; */
     background-image: url("Самокат-фон-1.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-size: cover; */
-    /* display: flex; */
     justify-content: space-around;
     padding: 2%;
     padding-top: 2%;
@@ -67,10 +64,6 @@ header {
     top: 15%;
     /* left: 0%; */
     z-index: 0;
-}
-
-header img {
-    z-index: -100;
 }
 
 header h1{
@@ -411,3 +404,16 @@ footer .cp {
     justify-self:center !important;
 }
 
+@media screen and (min-width: 425px) {
+    
+    header {
+        background-size: 100vw 350px;
+        background-position: 0 10%;
+    }
+    
+    .header_title {
+    position: fixed;
+    top: 8%;
+    z-index: 0;
+    }
+}
