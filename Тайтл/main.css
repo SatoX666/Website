@@ -288,12 +288,23 @@ header h4{
 .faq {
     background-color: #242427;
     padding-left: 3%;
+    margin: 0%;
+    
 }
 
+.faq h1 {
+    margin: 0%;
+    padding: 2% 0%;
+}
+
+.faq label {
+    font-size: large;
+}
 
 .faq p {
     height: 0px;
     overflow: hidden;
+    font-size: large;
     
 }
 
@@ -385,4 +396,18 @@ header h4{
     to {height: 0px; overflow: hidden;}
 }
 
+
+/* footer */
+footer {
+    background-color: #161618;
+    padding: 2% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 45%;
+}
+
+footer .cp {
+    justify-self:center !important;
+}
 
