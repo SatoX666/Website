@@ -1,40 +1,42 @@
 body {
-    background-color:#242427;
+    background-color: #242427;
     background-attachment: fixed;
     color: whitesmoke;
-    
+
     margin: 0;
     font-size: 16px;
     font-weight: normal;
-    font-family: monospace,'Courier New', Courier;
+    font-family: monospace, 'Courier New', Courier;
 }
 
+* {
+    box-sizing: border-box
+}
 
 /* nav */
 nav {
-    background-color:#ad2121;
+    background-color: #ad2121;
     padding: 10px;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 5;
-
 }
 
 nav * {
     margin-right: 20px;
 }
 
-nav img{
+nav img {
     margin-left: 1%;
     margin-right: 3%;
-    filter:invert() ;
+    filter: invert();
 }
 
 nav a {
     text-decoration: none;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 
@@ -49,12 +51,10 @@ header {
     background-attachment: fixed;
     justify-content: space-around;
     padding: 2%;
-    padding-top: 2%;
-    padding-bottom: 12%;
     height: 270px;
     align-items: center;
     font-family: 'Mulish', sans-serif;
-    color: black;  
+    color: black;
     z-index: -1;
     position: relative;
 }
@@ -66,33 +66,30 @@ header {
     z-index: 0;
 }
 
-header h1{
+header h1 {
     margin-bottom: 0%;
     font-size: 750%;
     text-shadow: 5px 5px 5px gray;
-    
+
 }
 
-header h4{
+header h4 {
     margin-top: 0%;
     font-style: italic;
     font-size: 200%;
 }
 
 
-
 /* grid */
 .grid {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(8,6vw);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 6vw);
     grid-gap: 20px;
     padding-left: 5%;
     padding-right: 5%;
     background-color: #242427;
     background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
     z-index: 4;
 }
 
@@ -109,7 +106,7 @@ header h4{
     border-radius: 20px;
 }
 
-.grid figcaption{
+.grid figcaption {
     position: absolute;
     top: 5%;
     left: 5%;
@@ -126,7 +123,7 @@ header h4{
 }
 
 .grid .g2 {
-    grid-column-start: 5 ;
+    grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 5;
@@ -154,15 +151,21 @@ header h4{
 }
 
 
-
 /* .block_3 */
 
 .block_3 {
-    background-color:aliceblue;
-    padding: 3%;
-    display: flex;
+    background-color: aliceblue;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    display: grid;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+    .block_3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .arenda {
@@ -171,7 +174,7 @@ header h4{
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 1%;
-    width: 50%;
+    width: auto;
     background-color: #ad2121;
     color: whitesmoke;
     border-radius: 30px;
@@ -180,101 +183,81 @@ header h4{
 
 /* guide */
 .guide {
-    color: black;
-    margin-left: 5%;
-    width: 40%;
-    position: relative;
-}
-
-.guide label {
-    background-color: #ad2121;
-    font-size: large;
-    font-weight: 600;
-    color: whitesmoke;
-    width: fit-content;
-    padding: 3%;
     border-radius: 30px;
-    margin: 0;
+    background-color: #ad2121;
+    color: whitesmoke;
+    padding: 3%;
     display: block;
     position: relative;
     z-index: 2;
+    width: fit-content;
 }
 
-.guide .button {
-    display: none;
-}
-
-.guide .button:checked~label {
+#btn:checked ~ .guide {
     animation: move 2s;
     animation-fill-mode: forwards;
 }
 
+#btn:checked ~ .guide .lp {
+    position: unset;
+}
+
+.guide > span {
+    font-weight: 600;
+    font-size: large;
+    display: block;
+}
+
+#btn {
+    display: none;
+}
+
 @keyframes move {
-    from {padding-right: 0%;}
-    to {padding-right: 60%;}
-    from {padding-bottom: 0%;}
-    to {padding-bottom: 40%;}
+    from {
+        margin: 0;
+    }
+    to {
+        margin: 0 0 0 40%;
+    }
 }
 
 .guide .lp {
-    position: absolute;
-    width: 80%;
-    height: 100%;
     top: 60px;
-    left: 2%;
     z-index: 4;
-    /* border: 2px solid black; */
+    position: absolute;
 }
 
 .guide p {
     color: whitesmoke;
-    /* background-color: #ad2121; */
-    padding: 2%;
     margin: 0;
 }
 
-.guide .button:checked ~ .lp .p1{
-    margin-top: 0%;
-    padding-top: 0%;
+.button:checked ~ .guide .lp .p1 {
+    margin-top: 0;
+    padding-top: 0;
     opacity: 1;
     transition: opacity 1s;
 }
 
-.guide .button:checked ~ .lp .p2 {
+.button:checked ~ .guide .lp .p2 {
     opacity: 1;
     transition: opacity 2s;
 }
 
-.guide .button:checked ~ .lp .p3 {
+.button:checked ~ .guide .lp .p3 {
     opacity: 1;
     transition: opacity 3s;
 }
 
-.guide .button:checked ~ .lp .p4 {
+.button:checked ~ .guide .lp .p4 {
     opacity: 1;
     transition: opacity 4s;
 }
 
-.guide .p1 {
+.guide .p1, .guide .p2, .guide .p3, .guide .p4 {
+    margin-top: 16px;
     opacity: 0;
 }
-
-.guide .p2 {
-    opacity: 0;
-}
-
-.guide .p3 {
-    opacity: 0;
-}
-
-.guide .p4 {
-    opacity: 0;
-}
-
-@media (max-width:425px) {
-    .block_3 {flex-direction: column;}
-}
-
 
 
 /* faq */
@@ -282,7 +265,7 @@ header h4{
     background-color: #242427;
     padding-left: 3%;
     margin: 0%;
-    
+
 }
 
 .faq h1 {
@@ -298,95 +281,165 @@ header h4{
     height: 0px;
     overflow: hidden;
     font-size: large;
-    
+
 }
 
 .faq input {
     display: none;
 }
 
-.faq #q1:checked~.q1 {
+.faq #q1:checked ~ .q1 {
     animation: faq_move_open 1s forwards;
 }
+
 @keyframes faq_move_open {
-    from {height: 0px; overflow: hidden;}
-    to {height: 25px; overflow: visible;}
+    from {
+        height: 0px;
+        overflow: hidden;
+    }
+    to {
+        height: 25px;
+        overflow: visible;
+    }
 }
 
-.faq #q1:not(:checked)~.q1 {
+.faq #q1:not(:checked) ~ .q1 {
     animation: faq_move_closed 1s forwards;
 }
+
 @keyframes faq_move_closed {
-    from {height: 25px; overflow: visible;}
-    to {height: 0px; overflow: hidden;}
+    from {
+        height: 25px;
+        overflow: visible;
+    }
+    to {
+        height: 0px;
+        overflow: hidden;
+    }
 }
 
 
-.faq #q2:checked~.q2 {
+.faq #q2:checked ~ .q2 {
     animation: faq_move_open 1s forwards;
 }
+
 @keyframes faq_move_open {
-    from {height: 0px; overflow: hidden;}
-    to {height: 25px; overflow: visible;}
+    from {
+        height: 0px;
+        overflow: hidden;
+    }
+    to {
+        height: 25px;
+        overflow: visible;
+    }
 }
 
-.faq #q2:not(:checked)~.q2 {
+.faq #q2:not(:checked) ~ .q2 {
     animation: faq_move_closed 1s forwards;
 }
+
 @keyframes faq_move_closed {
-    from {height: 25px; overflow: visible;}
-    to {height: 0px; overflow: hidden;}
+    from {
+        height: 25px;
+        overflow: visible;
+    }
+    to {
+        height: 0px;
+        overflow: hidden;
+    }
 }
 
 
-.faq #q3:checked~.q3 {
+.faq #q3:checked ~ .q3 {
     animation: faq_move_open 1s forwards;
 }
+
 @keyframes faq_move_open {
-    from {height: 0px; overflow: hidden;}
-    to {height: 25px; overflow: visible;}
+    from {
+        height: 0px;
+        overflow: hidden;
+    }
+    to {
+        height: 25px;
+        overflow: visible;
+    }
 }
 
-.faq #q3:not(:checked)~.q3 {
+.faq #q3:not(:checked) ~ .q3 {
     animation: faq_move_closed 1s forwards;
 }
+
 @keyframes faq_move_closed {
-    from {height: 25px; overflow: visible;}
-    to {height: 0px; overflow: hidden;}
+    from {
+        height: 25px;
+        overflow: visible;
+    }
+    to {
+        height: 0px;
+        overflow: hidden;
+    }
 }
 
 
-.faq #q4:checked~.q4 {
+.faq #q4:checked ~ .q4 {
     animation: faq_move_open 1s forwards;
 }
+
 @keyframes faq_move_open {
-    from {height: 0px; overflow: hidden;}
-    to {height: 25px; overflow: visible;}
+    from {
+        height: 0px;
+        overflow: hidden;
+    }
+    to {
+        height: 25px;
+        overflow: visible;
+    }
 }
 
-.faq #q4:not(:checked)~.q4 {
+.faq #q4:not(:checked) ~ .q4 {
     animation: faq_move_closed 1s forwards;
 }
+
 @keyframes faq_move_closed {
-    from {height: 25px; overflow: visible;}
-    to {height: 0px; overflow: hidden;}
+    from {
+        height: 25px;
+        overflow: visible;
+    }
+    to {
+        height: 0px;
+        overflow: hidden;
+    }
 }
 
 
-.faq #q5:checked~.q5 {
+.faq #q5:checked ~ .q5 {
     animation: faq_move_open 1s forwards;
 }
+
 @keyframes faq_move_open {
-    from {height: 0px; overflow: hidden;}
-    to {height: 25px; overflow: visible;}
+    from {
+        height: 0px;
+        overflow: hidden;
+    }
+    to {
+        height: 25px;
+        overflow: visible;
+    }
 }
 
-.faq #q5:not(:checked)~.q5 {
+.faq #q5:not(:checked) ~ .q5 {
     animation: faq_move_closed 1s forwards;
 }
+
 @keyframes faq_move_closed {
-    from {height: 25px; overflow: visible;}
-    to {height: 0px; overflow: hidden;}
+    from {
+        height: 25px;
+        overflow: visible;
+    }
+    to {
+        height: 0px;
+        overflow: hidden;
+    }
 }
 
 
@@ -401,19 +454,19 @@ footer {
 }
 
 footer .cp {
-    justify-self:center !important;
+    justify-self: center !important;
 }
 
 @media screen and (min-width: 425px) {
-    
+
     header {
         background-size: 100vw 350px;
         background-position: 0 10%;
     }
-    
+
     .header_title {
-    position: fixed;
-    top: 8%;
-    z-index: 0;
+        position: fixed;
+        top: 8%;
+        z-index: 0;
     }
 }
