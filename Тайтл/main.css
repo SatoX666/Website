@@ -69,8 +69,12 @@ header {
 header h1 {
     margin-bottom: 0%;
     font-size: 750%;
+<<<<<<< Updated upstream
     text-shadow: 5px 5px 5px gray;
 
+=======
+    text-shadow: 5px 5px 5px gray; 
+>>>>>>> Stashed changes
 }
 
 header h4 {
@@ -462,8 +466,13 @@ footer .cp {
     justify-self: center !important;
 }
 
+<<<<<<< Updated upstream
 @media screen and (max-width: 425px) {
 
+=======
+@media screen and (max-width: 425px) {
+    
+>>>>>>> Stashed changes
     header {
         background-size: 100vw 350px;
         background-position: 0 10%;
@@ -473,6 +482,63 @@ footer .cp {
         position: fixed;
         top: 8%;
         z-index: 0;
+<<<<<<< Updated upstream
     }
 
 }
+=======
+        margin-top: 8vw;
+    }
+    
+    header h1 {
+        margin-bottom: 0%;
+        font-size: 10vw;
+        text-shadow: 5px 5px 5px gray; 
+    }
+
+    header h4{
+        margin-top: 0%;
+        font-style: italic;
+        font-size: 3vw;
+    }
+
+    .block_3 {
+        flex-direction: column;
+        padding-right: 7%;
+    }
+
+    .arenda {
+        width: 100%;
+    }
+
+    .guide {
+        margin-top: 3vw;
+        margin-left: 0%;
+    }
+
+    .guide label {
+        padding-left: 3vw;
+    }
+
+    .guide .lp {
+        width: 90vw;
+    }
+
+    @keyframes move {
+        from {padding-right: 0%;}
+        to {padding-right: 200%;}
+        from {padding-bottom: 0%;}
+        to {padding-bottom: 100%;}
+    }
+
+    footer {
+        background-color: #1313b9;
+        padding: 2% 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 45%;
+    }
+
+}
+>>>>>>> Stashed changes
