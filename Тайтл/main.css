@@ -1,5 +1,5 @@
 body {
-    background-color: #242427;
+    background-color: #ffffff;
     background-attachment: fixed;
     color: whitesmoke;
 
@@ -32,6 +32,7 @@ nav img {
     margin-left: 1%;
     margin-right: 3%;
     filter: invert();
+    cursor: pointer;
 }
 
 nav a {
@@ -49,9 +50,10 @@ header {
     background-image: url("Самокат-фон-1.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: 100vw 570px;
     justify-content: space-around;
     padding: 2%;
-    height: 270px;
+    height: 570px;
     align-items: center;
     font-family: 'Mulish', sans-serif;
     color: black;
@@ -69,12 +71,7 @@ header {
 header h1 {
     margin-bottom: 0%;
     font-size: 750%;
-<<<<<<< Updated upstream
-    text-shadow: 5px 5px 5px gray;
-
-=======
     text-shadow: 5px 5px 5px gray; 
->>>>>>> Stashed changes
 }
 
 header h4 {
@@ -87,11 +84,11 @@ header h4 {
 /* grid */
 .grid {
     display: grid;
+    margin-top: 0%;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(8, 6vw);
     grid-gap: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 5%;
     background-color: #242427;
     background-attachment: fixed;
     z-index: 4;
@@ -232,7 +229,7 @@ header h4 {
 
 .guide .lp {
     top: 60px;
-    z-index: 4;
+    z-index: -2;
     position: absolute;
 }
 
@@ -273,8 +270,15 @@ header h4 {
 .faq {
     background-color: #242427;
     padding-left: 3%;
+    padding-bottom: 3%;
     margin: 0%;
+    position: relative;
+    z-index: 4;
+}
 
+.faq a {
+    text-decoration: none;
+    color: rgb(182, 30, 30);
 }
 
 .faq h1 {
@@ -284,12 +288,14 @@ header h4 {
 
 .faq label {
     font-size: large;
+    text-decoration-line: underline;
 }
 
 .faq p {
     height: 0px;
     overflow: hidden;
     font-size: large;
+    font-family: 'monospace';
 
 }
 
@@ -297,10 +303,6 @@ header h4 {
     display: none;
 }
 
-.faq #q1:checked ~ .q1 {
-    animation: faq_move_open 1s forwards;
-}
-
 @keyframes faq_move_open {
     from {
         height: 0px;
@@ -310,145 +312,57 @@ header h4 {
         height: 25px;
         overflow: visible;
     }
+}
+
+@keyframes faq_move_closed {
+    from {
+        height: 25px;
+        overflow: visible;
+    }
+    to {
+        height: 0px;
+        overflow: hidden;
+    }
+}
+
+.faq #q1:checked ~ .q1 {
+    animation: faq_move_open 1s forwards;
 }
 
 .faq #q1:not(:checked) ~ .q1 {
     animation: faq_move_closed 1s forwards;
 }
 
-@keyframes faq_move_closed {
-    from {
-        height: 25px;
-        overflow: visible;
-    }
-    to {
-        height: 0px;
-        overflow: hidden;
-    }
-}
-
-
 .faq #q2:checked ~ .q2 {
     animation: faq_move_open 1s forwards;
-}
-
-@keyframes faq_move_open {
-    from {
-        height: 0px;
-        overflow: hidden;
-    }
-    to {
-        height: 25px;
-        overflow: visible;
-    }
 }
 
 .faq #q2:not(:checked) ~ .q2 {
     animation: faq_move_closed 1s forwards;
 }
 
-@keyframes faq_move_closed {
-    from {
-        height: 25px;
-        overflow: visible;
-    }
-    to {
-        height: 0px;
-        overflow: hidden;
-    }
-}
-
-
 .faq #q3:checked ~ .q3 {
     animation: faq_move_open 1s forwards;
-}
-
-@keyframes faq_move_open {
-    from {
-        height: 0px;
-        overflow: hidden;
-    }
-    to {
-        height: 25px;
-        overflow: visible;
-    }
 }
 
 .faq #q3:not(:checked) ~ .q3 {
     animation: faq_move_closed 1s forwards;
 }
 
-@keyframes faq_move_closed {
-    from {
-        height: 25px;
-        overflow: visible;
-    }
-    to {
-        height: 0px;
-        overflow: hidden;
-    }
-}
-
-
 .faq #q4:checked ~ .q4 {
     animation: faq_move_open 1s forwards;
-}
-
-@keyframes faq_move_open {
-    from {
-        height: 0px;
-        overflow: hidden;
-    }
-    to {
-        height: 25px;
-        overflow: visible;
-    }
 }
 
 .faq #q4:not(:checked) ~ .q4 {
     animation: faq_move_closed 1s forwards;
 }
 
-@keyframes faq_move_closed {
-    from {
-        height: 25px;
-        overflow: visible;
-    }
-    to {
-        height: 0px;
-        overflow: hidden;
-    }
-}
-
-
 .faq #q5:checked ~ .q5 {
     animation: faq_move_open 1s forwards;
 }
 
-@keyframes faq_move_open {
-    from {
-        height: 0px;
-        overflow: hidden;
-    }
-    to {
-        height: 25px;
-        overflow: visible;
-    }
-}
-
 .faq #q5:not(:checked) ~ .q5 {
     animation: faq_move_closed 1s forwards;
-}
-
-@keyframes faq_move_closed {
-    from {
-        height: 25px;
-        overflow: visible;
-    }
-    to {
-        height: 0px;
-        overflow: hidden;
-    }
 }
 
 
@@ -460,33 +374,29 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-right: 45%;
+    margin: 0%;
 }
 
 footer .cp {
     justify-self: center !important;
 }
 
-<<<<<<< Updated upstream
-@media screen and (max-width: 425px) {
 
-=======
+
+
+
 @media screen and (max-width: 425px) {
     
->>>>>>> Stashed changes
     header {
-        background-size: 100vw 350px;
+        background-size: 100vw 200px;
         background-position: 0 10%;
+        height: 220px;
     }
 
     .header_title {
         position: fixed;
         top: 8%;
         z-index: 0;
-<<<<<<< Updated upstream
-    }
-
-}
-=======
         margin-top: 8vw;
     }
     
@@ -505,6 +415,8 @@ footer .cp {
     .block_3 {
         flex-direction: column;
         padding-right: 7%;
+        height: fit-content;
+        transition: all 1s;
     }
 
     .arenda {
@@ -516,29 +428,97 @@ footer .cp {
         margin-left: 0%;
     }
 
+    .guide span {
+        text-decoration-line: underline;
+    }
+
     .guide label {
         padding-left: 3vw;
     }
 
     .guide .lp {
-        width: 90vw;
+        width: 85vw;
     }
 
     @keyframes move {
-        from {padding-right: 0%;}
-        to {padding-right: 200%;}
-        from {padding-bottom: 0%;}
-        to {padding-bottom: 100%;}
+        from {
+            margin: 0 0% 0 0;
+            width: 200px;
+            height: 52px;
+        }
+        to {
+            margin: 0 0 0 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     footer {
-        background-color: #1313b9;
+        background-color: #161618;
         padding: 2% 2%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 45%;
+        padding-right: 2%;
     }
 
+    .faq #q1:checked ~ .q1 {
+        animation: faq_move_open1 1s forwards;
+    }
+    
+    .faq #q1:not(:checked) ~ .q1 {
+        animation: faq_move_closed1 1s forwards;
+    }
+    
+    .faq #q2:checked ~ .q2 {
+        animation: faq_move_open1 1s forwards;
+    }
+    
+    .faq #q2:not(:checked) ~ .q2 {
+        animation: faq_move_closed1 1s forwards;
+    }
+
+    @keyframes faq_move_open {
+        from {
+            height: 0px;
+            overflow: hidden;
+        }
+        to {
+            height: 20vh;
+            overflow: visible;
+        }
+    }
+    
+    @keyframes faq_move_closed {
+        from {
+            height: 20vh;
+            overflow: visible;
+        }
+        to {
+            height: 0px;
+            overflow: hidden;
+        }
+    }
+    
+    @keyframes faq_move_open1 {
+        from {
+            height: 0px;
+            overflow: hidden;
+        }
+        to {
+            height: 14vh;
+            overflow: visible;
+        }
+    }
+
+    @keyframes faq_move_closed1 {
+        from {
+            height: 14vh;
+            overflow: visible;
+        }
+        to {
+            height: 0px;
+            overflow: hidden;
+        }
+    }
 }
->>>>>>> Stashed changes
