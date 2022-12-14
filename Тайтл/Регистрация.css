@@ -16,13 +16,31 @@
   }
   
   .form {
-    background: #13232fe6;
+    background: #242427d3;
     padding: 40px;
-    max-width: 600px;
+    width: 600px;
     margin: 40px auto;
     border-radius: 4px;
-    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-    /* display: none; */
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: calc(50vw - 300px);
+    top: 13%;
+    z-index: 10;
+    display: none;
+  }
+
+  .krestik {
+    width: 24px;
+    height: 24px;
+    margin-top: -4%;
+    margin-bottom: 1%;
+    margin-left: 95%;
+    cursor: pointer;
+    transition: .5s ease;
+  }
+
+  .krestik:hover {
+    filter: invert()
   }
   
   .tab-group {
@@ -169,6 +187,9 @@
   .forgot a {
     color: #ffffff;
     text-decoration: none;
-    
     transition: .5s ease;
+  }
+  
+  .forgot a:hover {
+    color: #b12020;
   }

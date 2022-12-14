@@ -38,6 +38,11 @@ nav * {
     margin-right: 10px;
 }
 
+nav .help {
+    margin-left: auto;
+}
+
+
 nav img {
     margin-left: 1%;
     margin-right: 1%;

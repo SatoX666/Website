@@ -11,3 +11,11 @@ link_alert.onclick = function() {
 logo.onclick = function() {
     window.scrollTo(0, 0)
 }
+
+function closePUP() {
+    document.querySelector(".form").style.display="none"
+}
+
+function openPUP() {
+    document.querySelector(".form").style.display="block"
+}
