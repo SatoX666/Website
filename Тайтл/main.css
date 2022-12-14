@@ -13,6 +13,16 @@ body {
     box-sizing: border-box
 }
 
+a {
+    text-decoration: none;
+    color: #b12020;
+    transition: .5s ease;
+  }
+
+a:hover {
+    color: #6420b1;
+  }
+
 /* nav */
 nav {
     background-color: #ad2121;
@@ -25,12 +35,12 @@ nav {
 }
 
 nav * {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav img {
     margin-left: 1%;
-    margin-right: 3%;
+    margin-right: 1%;
     filter: invert();
     cursor: pointer;
 }
@@ -57,7 +67,7 @@ header {
     height: 570px;
     align-items: center;
     font-family: 'Mulish', sans-serif;
-    color: black;
+    color: black !important;
     z-index: -1;
     position: relative;
 }
