@@ -16,7 +16,7 @@
 
 	<nav>
 		<img src="logo_h_bw.png" alt="логотип" id="logo">
-		<a href="javascript:openPUP()">Регистрация/Вход</a>
+		<a href="javascript:openPUP();openOpacity()">Регистрация/Вход</a>
 		<a class="help" href="#" >Тех. поддержка</a>
 	</nav>
 	
@@ -118,9 +118,10 @@
 		<p>©2022, ООО "ШУВ"</p>
 	</footer>
 	
-	<div class="form">
+	<div class="form" >
 
-		<img class="krestik" src="крестик 1.png" alt="крестик" onclick="closePUP()">
+		
+		<img class="krestik" src="крестик 1.png" alt="крестик" onclick="closeOpacity()">
 	
 	    <ul class="tab-group">
 	      <li class="tab active"><a href="#signup">Регистрация</a></li>
@@ -131,21 +132,21 @@
 	      <div id="signup">
 	        <h1 class="h1">Зарегистрироваться</h1>
 		
-	        <form action="index.html" method="post">
+	        <form action="most.php" method="post" onsubmit="alert('hi')">
 			
 	          <div class="top-row">
 	            <div class="field-wrap">
 	              <label class="Pole">
 	                Имя<span class="req"></span>
 	              </label>
-	              <input type="text" autocomplete="off" />
+	              <input name="name1" type="text" autocomplete="off" />
 	            </div>
 			
 	            <div class="field-wrap">
 	              <label class="Pole">
 	                Фамилия<span class="req"></span>
 	              </label>
-	              <input type="text" autocomplete="off" />
+	              <input name="surname" type="text" autocomplete="off" />
 	            </div>
 	          </div>
 		  
@@ -153,14 +154,14 @@
 	            <label class="Pole">
 	              Email адресс<span class="req">*</span>
 	            </label>
-	            <input type="email" required autocomplete="off" />
+	            <input name="email" type="email" required autocomplete="off" />
 	          </div>
 		  
 	          <div class="field-wrap">
 	            <label class="Pole">
 	              Пароль<span class="req">*</span>
 	            </label>
-	            <input type="password" required autocomplete="off" />
+	            <input name="password" type="password" required autocomplete="off" />
 	          </div>
 		  
 	          <button type="submit" class="button button-block">Начать</button>

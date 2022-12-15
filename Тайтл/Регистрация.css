@@ -29,15 +29,37 @@
     display: none;
   }
 
-  @keyframes opacity {
+  .formAnimateClose {
+    animation: close_opc .4s forwards;
+  }
+
+  .formAnimateOpen {
+    animation: open_opc .4s forwards;
+  }
+
+  @keyframes close_opc {
       from {
         opacity: 1;
+        z-index: 10;
       }
 
       to {
         opacity: 0;
+        z-index: -1;
       }
   }
+
+  @keyframes open_opc {
+    from {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    to {
+      opacity: 1;
+      z-index: 10;
+    }
+}
 
   .krestik {
     width: 24px;

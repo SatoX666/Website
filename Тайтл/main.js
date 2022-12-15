@@ -21,5 +21,12 @@ function openPUP() {
 }
 
 function closeOpacity() {
-    document.querySelector(".form").style.animation="opacity: 1s"
+    document.querySelector(".form").classList.add("formAnimateClose")
+    document.querySelector(".form").classList.remove("formAnimateOpen")
+}
+
+function openOpacity() {
+    document.querySelector(".form").classList.remove("formAnimateClose")
+    document.querySelector(".form").classList.add("formAnimateOpen")
+
 }

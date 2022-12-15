@@ -220,8 +220,7 @@ header h4 {
 }
 
 #btn:checked ~ .guide {
-    animation: move 2s;
-    animation-fill-mode: forwards;
+    animation: move 2s forwards;
 }
 
 #btn:checked ~ .guide .lp {
