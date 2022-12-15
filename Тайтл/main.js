@@ -19,3 +19,7 @@ function closePUP() {
 function openPUP() {
     document.querySelector(".form").style.display="block"
 }
+
+function closeOpacity() {
+    document.querySelector(".form").style.animation="opacity: 1s"
+}

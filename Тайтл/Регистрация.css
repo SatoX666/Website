@@ -21,12 +21,22 @@
     width: 600px;
     margin: 40px auto;
     border-radius: 4px;
-    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px 4px #0000004d;
     position: fixed;
     left: calc(50vw - 300px);
     top: 13%;
     z-index: 10;
     display: none;
+  }
+
+  @keyframes opacity {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
   }
 
   .krestik {
@@ -35,13 +45,14 @@
     margin-top: -4%;
     margin-bottom: 1%;
     margin-left: 95%;
+    filter: invert();
     cursor: pointer;
     transition: .5s ease;
   }
 
-  .krestik:hover {
-    filter: invert()
-  }
+  /* .krestik:hover {
+    filter: none;
+  } */
   
   .tab-group {
     list-style: none;
@@ -191,5 +202,5 @@
   }
   
   .forgot a:hover {
-    color: #b12020;
+    color: #e52626;
   }

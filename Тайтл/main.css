@@ -20,12 +20,12 @@ a {
   }
 
 a:hover {
-    color: #6420b1;
+    color: #e52626;
   }
 
 /* nav */
 nav {
-    background-color: #ad2121;
+    background-color: #272424;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -48,6 +48,12 @@ nav img {
     margin-right: 1%;
     filter: invert();
     cursor: pointer;
+    transition: .5s ease;
+}
+
+nav img:hover {
+    filter:none;
+    content: url("logo_h_clr.png");
 }
 
 nav a {
