@@ -118,9 +118,9 @@
 		<p>©2022, ООО "ШУВ"</p>
 	</footer>
 	
-	<div class="form" >
+	<!-- Registration -->
+	<div class="form" style="backdrop-filter: blur(10px)" >
 
-		
 		<img class="krestik" src="крестик 1.png" alt="крестик" onclick="closeOpacity()">
 	
 	    <ul class="tab-group">
@@ -164,7 +164,7 @@
 	            <input name="password1" type="password" required autocomplete="off" />
 	          </div>
 		  
-	          <button type="submit" class="button button-block">Начать</button>
+	          <button style="cursor: pointer;" type="submit" class="button button-block">Начать</button>
 		  
 	        </form>
 		
@@ -191,7 +191,7 @@
 		  
 	          <p class="forgot"><a href="#">Забыли пароль?</a></p>
 		  
-	          <button class="button button-block">Вход</button>
+	          <div style="text-align: center;" class="button button-block" onclick="getData('most.php','' )">Вход</div>
 		  
 	        </form>
 		
@@ -206,5 +206,26 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="Регистрация.js"></script>
 	<script src="main.js"></script>
+
+	<!-- Sign in -->
+	<script>
+		XMLHttpRequestObject = new XMLHttpRequest();
+		function getData(dataSource) { 
+		    data="?name1="+document.getElementByName("name1").value+"&"+document.getElementByName("surname").value+"&"+document.getElementByName("email").value+"&"+document.getElementByName("password1").value
+		    dataSource+=data
+			console.log(dataSource)
+		    if (XMLHttpRequestObject) {
+		    // var obj = document.getElementById(divID); 
+		    XMLHttpRequestObject.open("GET", dataSource); 
+		    XMLHttpRequestObject.onreadystatechange=function() {
+		        if (XMLHttpRequestObject.readyState == 4 && 
+		            XMLHttpRequestObject.status == 200) { 
+		            console.log(XMLHttpRequestObject.responseText); 
+		            } 
+		        }
+		    XMLHttpRequestObject.send(null); 
+		    }
+		}
+	</script>
 </body>
 </html>
