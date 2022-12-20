@@ -1,7 +1,11 @@
-// scroll
-const start = () => window.scrollTo(0, 0)
+const start = () => window.scrollTo(300, 0)
 	setTimeout(start, 100)
 
+// scroll
+function scrollFAQ() {
+    const start = () => window.scrollTo(0, 0)
+	    setTimeout(start, 100)
+}
 //Link_alert
 link_alert.onclick = function() {
     alert("Вы собираетесь перейти на сторонний сайт!")
