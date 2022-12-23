@@ -1,17 +1,11 @@
 <?php
-// Метод POST
-$name=$_POST ['name1'];
-$surname=$_POST ['surname'];
-$email=$_POST ['email'];
-$pass=$_POST ['password1'];
-
 // Метод GET
-// $name=$_GET ['name1'];
-// $surname=$_GET ['surname'];
-// $email=$_GET ['email'];
-// $pass=$_GET ['password1'];
+$name=$_GET ['name1'];
+$surname=$_GET ['surname'];
+$email=$_GET ['email'];
+$pass=$_GET ['password1'];
 
-echo "Успешно";
+// echo "Успешно";
 
 $link = new mysqli ( 
     'localhost',        /* Хост, к которому мы подключаемся */ 

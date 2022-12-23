@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Самокаты</title>
+	<title>Shoow</title>
 	<link rel="stylesheet" href="main.css" >
 	<link rel="stylesheet" href="Регистрация.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
 
 	<nav>
 		<img src="logo_h_bw.png" alt="логотип" id="logo">
-		<a href="javascript:openPUP();openOpacity()">Регистрация/Вход</a>
+		<a id="User" href="javascript:openPUP();openOpacity()">Регистрация/Вход</a>
 		<a class="help" href="#" >Тех. поддержка</a>
 	</nav>
 	
@@ -29,24 +29,24 @@
 	
 	<main class="grid">
 		<figure class="g1"><a href="">
-			<!-- <img src="Самокаты 1.png" alt="список"> -->
+			<img src="Новости.jpg" alt="список">
 			<figcaption> Новости</figcaption>
 		</a></figure>
-		<figure class="g2"><a href="">
-			<!-- <img src="Самокаты 1.png" alt="список"> -->
+		<figure class="g2"><a href="#faq">
+			<img src="FAQ.jpg" alt="список">
 			<figcaption> FAQ</figcaption>
 		</a></figure>
-		<figure class="g3"><a href="">
-			<!-- <img src="Самокаты 1.png" alt="список"> -->
-			<figcaption> Lorem, ipsum.</figcaption>
+		<figure class="g5"><a href="">
+			<img src="О нас.jpg" alt="список">
+			<figcaption> О нас</figcaption>
 		</a></figure>
 		<figure class="g4"><a href="">
-			<!-- <img src="Самокаты 1.png" alt="список"> -->
+			<img src="Отзывы.jpg" alt="список">
 			<figcaption> Отзывы</figcaption>
 		</a></figure>
-		<figure class="g5"><a href="">
-			<!-- <img src="Самокаты 1.png" alt="список"> -->
-			<figcaption> Ассортимент самокатов</figcaption>
+		<figure class="g3"><a href="">
+			<img src="Самокаты.jpg" alt="список">
+			<figcaption> Самокаты</figcaption>
 		</a></figure>
 	</main>
 	
@@ -65,9 +65,9 @@
 			<span>Как воспользоваться?</span>
 			<div class="lp">
 				<p class="p1"> Для поездки на самокате зарегистрируйтесь в приложении оператора и привяжите банковскую карту. </p>
-				<p class="p2"> Через приложение найдите самокат на карте и начните аренду отсканировав QR-код на руле и отстегнув замок.</p>
+				<p class="p2"> Через приложение найдите самокат на карте и начните аренду, отсканировав QR-код на руле и отстегнув замок.</p>
 				<p class="p3"> Свободно перемещайтесь в рамках зоны действия, обязательно соблюдайте правила дорожного движения. </p>
-				<p class="p4"> Чтобы завершить аренду припаркуйтесь на ближайшей велопарковке или станции проката и застегните замок. </p>
+				<p class="p4"> Чтобы завершить аренду, припаркуйтесь на ближайшей велопарковке или станции проката и застегните замок. </p>
 			</div>
 		</label>
 	</div>
@@ -75,7 +75,7 @@
 	<!-- <h1>Карта медленных зон электросамокатов</h1> -->
 	<!-- <p>В рамках повышения безопасности дорожного движения был запущен пилотный проект «медленных зон» - автоматическое снижение скорости самокатов от 5 до 15 км/ч в установленных зонах. В список медленных зон вошли крупные парки, центральные улицы города, а также наиболее проблемные участки улично-дорожной сети.</p> -->
 	
-	<div class="faq">
+	<div class="faq" id="faq">
 		<h1>Частые вопросы</h1>
 		<input type="checkbox" id="q1">
 		<label for="q1">Как ездить на электросамокате?</label>
@@ -86,7 +86,7 @@
 		<input type="checkbox" id="q2">
 		<label for="q2">Где можно ездить?</label>
 		<p class="q2">
-			Зоны использования самокатов отмечены в приложениях. Не следует пересекать границы зон, за нарушение операторами предусмотрены штрафные санкции.
+			Зоны использования самокатов отмечены в приложениях. Не следует пересекать границы зон, за нарушение предусмотрены штрафные санкции.
 		</p>
 	
 		<input type="checkbox" id="q3">
@@ -98,7 +98,7 @@
 		<input type="checkbox" id="q4">
 		<label for="q4">Обязательно ли использовать шлем?</label>
 		<p class="q4">
-			Правила сервисов не запрещают передвижение на самокате без шлема, однако, для повышения вашей безопасности, мы рекомендуем использовать шлем.
+			Правила сервисов не запрещают передвижение на самокате без шлема, однако для повышения вашей безопасности мы рекомендуем использовать шлем.
 		</p>
 	
 		<input type="checkbox" id="q5">
@@ -123,7 +123,7 @@
 
 		<img class="krestik" src="крестик 1.png" alt="крестик" onclick="closeOpacity()">
 	
-	    <ul class="tab-group">
+	    <ul class="tab-group" id="ULform">
 	      <li class="tab active"><a href="#signup">Регистрация</a></li>
 	      <li class="tab"><a href="#login">Вход</a></li>
 	    </ul>
@@ -131,9 +131,8 @@
 	    <div class="tab-content">
 	      <div id="signup">
 	        <h1 class="h1">Зарегистрироваться</h1>
-		
-	        <form action="most.php" method="post">
-			
+
+	        <form action="most.php" method="get"> 
 	          <div class="top-row">
 	            <div class="field-wrap">
 	              <label class="Pole">
@@ -171,27 +170,27 @@
 	      </div>
 	  
 	      <div id="login">
-	        <h1 class="h1">С возвращением!</h1>
+	        <h1 class="h1" id="VhodLog">С возвращением!</h1>
 		
-	        <form action="/" method="post">
+	        <form name="Vhod">
 			
 	          <div class="field-wrap">
 	            <label class="Pole">
 	              Email адресс<span class="req">*</span>
 	            </label>
-	            <input type="email" required autocomplete="off" />
+	            <input name="email2" type="email" required autocomplete="off" />
 	          </div>
 		  
 	          <div class="field-wrap">
 	            <label class="Pole">
 	              Пароль<span class="req">*</span>
 	            </label>
-	            <input type="password" required autocomplete="off" />
+	            <input name="password1" type="password" required autocomplete="off" />
 	          </div>
 		  
 	          <p class="forgot"><a href="#">Забыли пароль?</a></p>
 		  
-	          <div style="text-align: center;" class="button button-block" onclick="getData('most.php','' )">Вход</div>
+	          <div style="text-align: center;" class="button button-block" onclick="getData('most2.php')">Вход</div>
 		  
 	        </form>
 		
@@ -209,23 +208,39 @@
 
 	<!-- Sign in -->
 	<script>
-		XMLHttpRequestObject = new XMLHttpRequest();
-		function getData(dataSource) { 
-		    data="?name1="+document.getElementByName("name1").value+"&"+document.getElementByName("surname").value+"&"+document.getElementByName("email").value+"&"+document.getElementByName("password1").value
-		    dataSource+=data
-			console.log(dataSource)
-		    if (XMLHttpRequestObject) {
-		    // var obj = document.getElementById(divID); 
-		    XMLHttpRequestObject.open("GET", dataSource); 
-		    XMLHttpRequestObject.onreadystatechange=function() {
-		        if (XMLHttpRequestObject.readyState == 4 && 
-		            XMLHttpRequestObject.status == 200) { 
-		            console.log(XMLHttpRequestObject.responseText); 
-		            } 
-		        }
-		    XMLHttpRequestObject.send(null); 
-		    }
-		}
-	</script>
+        XMLHttpRequestObject = new XMLHttpRequest();
+
+        function getData(dataSource) {
+            // alert('hi')
+            data = "?email=" + document.Vhod.email2.value + "&" + "password1=" + document.Vhod.password1.value
+            dataSource += data
+            console.log(dataSource)
+            if (XMLHttpRequestObject) {
+                // var obj = document.getElementById(divID); 
+                XMLHttpRequestObject.open("GET", dataSource);
+                XMLHttpRequestObject.onreadystatechange = function () {
+                    if (XMLHttpRequestObject.readyState == 4 &&
+                        XMLHttpRequestObject.status == 200) {
+							answer=(XMLHttpRequestObject.responseText);
+							console.log(answer)
+
+						if (answer=="0") {
+							document.getElementById('VhodLog').innerHTML='Неверный логин или пароль!'
+						}
+
+						else {
+							document.getElementById('User').innerHTML=answer
+							closeOpacity()
+						}
+						}	
+                    	}
+            }
+                XMLHttpRequestObject.send(null);
+            
+
+			
+        }
+    </script>
+
 </body>
 </html>
